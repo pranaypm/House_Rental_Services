@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Forgotten Password</title>
+
+    <link rel="stylesheet" href="..\css\LoginPage.css">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="../js/mailsend.js"></script>
+    <script src="../js/passwordrecover.js"></script>
+  </head>
+  <body>
+    <div class="class1">
+      <div class="login-div">
+
+        <form class="login-form" name="prform" action ="..\php\passrec.php" method="post">
+      <span class="login-form-title"> Forgot password </span>
+
+
+        <div class="login-input">
+        <input class="input" type="email" name="email" id="email" placeholder=" Enter Registered Email" required>
+      </div>
+        <div class="button1">
+          <button type="submit" class="button" name="emailButton" id="emailButton" onclick="generateOtp()"> <span> Send OTP </span></button>
+        </div>
+
+        <div class="login-input">
+        <input class="input" type="text" name="OTP" placeholder=" Enter Received OTP" required>
+        </div>
+        <div class="button1">
+          <button type="submit" class="button" name="emailButton" id="otpButton" onclick="return validateotp();"> <span> validate OTP </span></button>
+        </div>
+      <div class="login-input" >
+        <input class="input" type="password" name="password1" id="password1" placeholder=" Enter new Password " required disabled>
+        </div>
+        <div class="login-input" >
+          <input class="input" type="password" name="password2" id="password2" placeholder=" Enter Password "  required disabled="disabled">
+          </div>
+
+        <div class="button1">
+
+      <button class="button" id="submitbutton" type="submit" onclick="return valpass()"disabled> <span> Submit </span></button>
+      <a href="loginPage.html"><button class="button" type="button"  > <span> Back </span></button></a>
+      </div>
+      </form>
+      </div>
+
+  </div>
+
+  </body>
+</html>

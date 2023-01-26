@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>LOGIN</title>
+    <link rel="stylesheet" href="..\css\LoginPage.css">
+	<script src="../js/loginPage.js"></script>
+  </head>
+  <body>
+
+
+  		<div class="class1">
+  			<div class="login-div">
+
+  				<form class="login-form" name="logform" action ="../php/login.php" onsubmit="return vallogin();"  method="post">
+				<span class="login-form-title"> Login </span>
+
+
+  				<div class="login-input">
+  				<input class="input" type="email" name="email" placeholder=" Enter Email" required>
+  				</div>
+
+
+				<div class="login-input" >
+  				<input class="input" type="password" name="password" placeholder=" Enter Password " required>
+  				</div>
+
+        <div class="login-for">
+          <a href="passRecovery.html"><p>Forgot your password.</p></a>
+        </div>
+			    <div class="button1">
+
+				<button class="button" type="submit"> <span> Login </span></button>
+				<a href="../html/iframesfirstscreen.html"><button class="button" type="button"  > <span> Back </span></button></a>
+				</div>
+				</form>
+  			</div>
+
+  	</div>
+
+  </body>
+</html>

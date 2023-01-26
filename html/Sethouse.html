@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> set home  Page </title>
+    <link rel="stylesheet" href="..\css\houseset.css">
+  </head>
+  <body>
+
+  		<div class="class1">
+        <iframe src="../php/myrooms.php" style="border: none;" name="showUrRooms" height="200px" width="700px"></iframe>
+  			<div class="house-div">
+  				<form class="houseform" name="houseform1" action="../php/sethouse.php" method="post" >
+  					<span class="house-form-title"> Rent Your House </span>
+				<br />
+            <div class="house-input" >
+              <input class="input100" type="text" name="FullName" placeholder=" Enter House Name " required>
+            </div>
+            <div class="house-input">
+              <label id="type">Choose House Type:</label>
+                <select name="typeHouse" size="1">
+                  <option name="1BHK" value="1BHK">1BHK</option>
+                  <option name="2BHK" value="2BHK">2BHK</option>
+                  <option name="3BHK" value="3BHK">3BHK</option>
+                  <option name="4BHK" value="4BHK">4BHK</option>
+			
+            </div>
+			 
+			<div class="house-input" >
+			<input class="input" type="text" name="address" placeholder="Address of the house" required>
+			</div>
+			
+      <div class="house-input">
+        <label id="type">Choose city:</label>
+          <select name="citytype" size="1">
+            <option name="Hyderbad" value="Hyderbad">Hyderbad</option>
+            <option name="Madanapalle" value="Madanapalle">Madanapalle</option>
+            <option name="Bangalore" value="Bangalore">Bangalore</option>
+            <option name="Chittoor" value="Chittoor">Chittoor</option>
+			
+	
+      </div>
+	  
+	  
+      <div class="house-input" >
+        <input class="input" type="Number" name="price" placeholder="Price of the house for a Month" required>
+		 <input class="input" type="Number" name="dprice" placeholder="Price of the house for a Day" required>
+      </div>
+	  <div class="house-input" >
+	  <label  id="type">Bike Parking Space&nbsp:</label>
+	  <input type="radio" id="parkingb1" name="parkingb" value="1">
+      <label for="parkingb1">Available</label>
+      <input type="radio" id="parkingb2" name="parkingb" value="0">
+      <label for="parkingb2">Not Available</label>
+	  <br/><br/>
+	  <label  id="type">Car Parking Space&nbsp :</label>
+	  <input type="radio" id="parkingc1" name="parkingc" value="1">
+      <label for="parkingc1">Available</label>
+      <input type="radio" id="parkingc2" name="parkingc" value="0">
+      <label for="parkingc2">Not Available</label>
+	  <br/><br/>
+	  <label  id="type">Domestic Pets &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp :</label>
+	  <input type="radio" id="Pets" name="Pets" value="1">
+      <label for="Pets">Allowed&nbsp</label>
+      <input type="radio" id="Pets" name="Pets" value="0">
+      <label for="Pets">Not Allowed</label>
+	  <br/><br/>
+              
+          
+	  <label  id="type">Furnishing Status&nbsp&nbsp&nbsp :</label>
+	  <input type="radio" id="furnishing1" name="furnishing" value="1">
+      <label for="furnishing1">Semi Furnished</label>
+      <input type="radio" id="furnishing2" name="furnishing" value="2">
+      <label for="furnishing2">fully Furnished</label>
+	  <input type="radio" id="furnishing3" name="furnishing" value="0">
+      <label for="furnishing3">No Furnishing</label>
+	  <br/><br/>
+	  
+	  <label  id="type">House Facing &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp :</label>
+	  <input type="radio" id="facing1" name="facing" value="1">
+      <label for="facing1">East</label>
+      <input type="radio" id="facing2" name="facing" value="2">
+      <label for="facing2">West</label>
+	  <input type="radio" id="facing3" name="facing" value="3">
+      <label for="facing3">North</label>
+	  <input type="radio" id="facing4" name="facing" value="4">
+      <label for="facing4">South</label>
+	  <br/><br/>
+      </div>
+	  <div>
+	  <input class="input" type="Number" name="floor" placeholder="House Floor Number Ex: Ground as 0" required>
+	  <br/>
+	  <input class="input" type="Number" name="washrooms" placeholder="Number of Washrooms" required>
+	  <br/>
+	  <input class="input" type="Number" name="balcony" placeholder="Number of Balconys" required>
+	  <br/>
+	  </div>
+       <div >
+      <input type="file" class="input" id="img" name="img" accept="image/*" multiple>
+	  </div>
+      <div class="location" >
+        <input type="text" id="lat" name="lati" placeholder="latitude" readonly>
+        <input type="text" id="lon" name="long" placeholder="longitude" readonly>
+          <button type="button" id="locbutton" name="locbutton" onclick="getLocation()">Click this to add location</button>
+
+  	  </div>
+      <div class="input2">
+  			<textarea class="input" name="textarea" rows="4" cols="80" placeholder="A little description of house"></textarea>
+  		</div>
+
+			<div class="button1">
+				<button class="button" type="submit" > <span> Post </span></button>
+				<a href="../php/LApage.php"><button class="button" type="button" > <span> Back </span></button></a>
+	    </div>
+      </form>
+  	</div>
+<script type="text/javascript">
+var latitude,longitude;
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    alert("Geolocation is not supported by this browser.");
+  }
+}
+    function showPosition(position) {
+      latitude=position.coords.latitude;
+      longitude= position.coords.longitude;
+
+      alert("latitude is "+latitude);
+      alert("longitude is "+longitude);
+    /*  x.innerHTML = ""+position.coords.latitude;
+      y.innerHTML = ""+position.coords.longitude;
+      */
+      document.getElementById('lat').value = latitude;
+      document.getElementById('lon').value = longitude;
+
+    }
+</script>
+  </body>
+</html>

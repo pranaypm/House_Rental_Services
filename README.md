@@ -1,1 +1,6 @@
-# House_Rental_Services
+I appreciate your visiting my project repository.
+
+Our project, "HOUSE RENTAL SERVICES " is a web-based system used to reserve a house /Apartment /Home temporarily and paying for the duration of the stay It minimizes the human effort for searching the houses manually and making deal with the property owner.
+
+
+It is a time-consuming process to search for a house in a locality and to deal with the owners, the lack of availability of owners increases the waiting time. To overcome these, we have finally concluded our project “HOUSE RENTAL SERVICES” is a website easy to use and does not require any special skills/training to operate it. The website is completely online so it can be accessed from anywhere and can rent a house by paying online. It can handle and serve many users at a single instance of time, helps customers to save money, effort, time, and energy. Customers need to sign up on the website, log in using their credentials, and check for the houses, select, and rent the house by paying.

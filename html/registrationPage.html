@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> Registration Page </title>
+    <link rel="stylesheet" href="..\css\RegistrationPage.css">
+	<script src="../js/RegistrationPage.js"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script src="../js/mailsend.js"></script>
+  </head>
+  <body>
+
+  		<div class="class1">
+  			<div class="registration-div">
+  				<form class="registration-form" name="registrate" action="../php/registration.php" onsubmit="return valregis();" method="post">
+
+  					<span class="registration-form-title"> Register </span>
+				<br />
+            <div class="registration-input" >
+              <input class="input100" type="text" name="FullName" placeholder=" Enter Full Name " required>
+            </div>
+            <div class="registration-input1" >
+            <label  for="gender" style="font-family: Poppins-Bold ; color: #555555;">Gender : </label>
+            <select id="gender">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="others">Others</option>
+            </select>
+            </div>
+
+            <div class="registration-input" >
+              <input class="input" type="Number" name="MobileNumber" placeholder="Mobile Number" required>
+            </div>
+
+
+			<div class="registration-input" >
+			<input class="input" type="email" name="email" placeholder="Email" required>
+
+			</div>
+
+  					<div class="registration-input">
+
+  						<input class="input" type="password" name="pass1" placeholder="Password" required>
+
+  					</div>
+            <div class="registration-input" >
+
+  						<input class="input" type="password" name="pass2" placeholder="Renter Password" required>
+
+  					</div>
+
+
+
+				<div class="button1">
+
+				<button class="button" type="submit"  > <span> Register </span></button>
+				<a href="loginPage.html"><button class="button" type="button" > <span> Back </span></button></a>
+		         </div>
+      </form>
+
+  	</div>
+
+  </body>
+</html>

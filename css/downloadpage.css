@@ -1,0 +1,44 @@
+body {
+	margin: 0%;
+	padding: 0%;
+}
+.main {
+	width: 840px;
+	height: 1048px;
+	background-color: pink;
+	margin: 120px; 	
+}
+.header {
+	margin: 30px;
+	padding-top: 50px;
+
+
+	align-items: center;
+}
+h2 {
+	text-align: center;
+	color: red;
+	font-family: all;
+	font-size: 40px;
+}
+.subject {
+	margin: 30px;
+	margin-left: 100px;
+	padding: 30px;
+	color: blue;
+}
+label {
+	padding-right: 20px;
+
+}
+input {
+	//border: none;
+
+}
+.subb {
+	display: flex;
+	flex-flow: wrap;
+	font-size: 20px;
+	padding: 20px;
+
+}

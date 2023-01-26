@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>House Rental Services</title>
+    <link rel="stylesheet" href="../css/iframefirstscreen.css">
+
+  </head>
+  <body>
+
+
+  		<div class="class1">
+
+        <section>
+        <div class="main">
+        <div class="p1"><img class="mySlides" src="../images/house1.jpg" height=570px width=800px></div>
+        <div class="p1"><img class="mySlides" src="../images/house2.jpg" height=570px width=800px></div>
+        <div class="p1"><img class="mySlides" src="../images/house3.jpg" height=570px width=800px></div>
+        <div class="p1"><img class="mySlides" src="../images/house4.jpg" height=570px width=800px></div>
+        </div>
+        </section>
+         <script>
+
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+          }
+          myIndex++;
+          if (myIndex > x.length) {myIndex = 1}
+          x[myIndex-1].style.display = "block";
+          setTimeout(carousel, 2500);
+        }
+        </script>
+
+
+  			<div class="login-div">
+  				<form class="login-form" >
+  					<span class="login-form-title" color:silver> Welcome to House Rental Services </span>
+                <br />
+				<div class="button1">
+				<a href="registrationPage.html"><button class="button11" type="button" > <span> Register </span></button></a>
+				</div>
+				<br />
+				<div class="button2">
+				<a href="loginPage.html"><button class="button22" type="button"  > <span> Login </span></button></a>
+				</div>
+  				</form>
+  			</div>
+
+
+  		</div>
+  </body>
+</html>
